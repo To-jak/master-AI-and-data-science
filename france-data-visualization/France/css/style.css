@@ -1,0 +1,43 @@
+body {
+    background: white;
+    padding-top: 50px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h2 {
+    font-size: 20px;
+}
+.lead {
+    margin-bottom: 30px;
+}
+
+.svg {
+    display: block;
+    margin: auto;
+}
+
+#map {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+#info-display {
+    display: block;
+    margin: auto;
+    padding: 15px;
+    background-color: white;
+    -webkit-box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.39);
+    -moz-box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.39);
+    box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.39); 
+    margin-bottom: 30px;    
+}
+
+#info-presentation {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
