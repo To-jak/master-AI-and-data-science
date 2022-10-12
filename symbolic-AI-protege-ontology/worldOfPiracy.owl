@@ -1,0 +1,801 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/pirates#"
+     xml:base="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/pirates"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:worldOfPiracy="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasCaptain -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasCaptain">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#responsibleOfShip"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Ship"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasShipSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasShipSize">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Ship"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ShipSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#isFriendWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#isFriendWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#responsibleOfShip -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#responsibleOfShip">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Ship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#underOrdersOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#underOrdersOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ShipSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Activity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#BigShip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#BigShip">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Ship"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasShipSize"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Large"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Brigantine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Brigantine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#NamedShip"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasShipSize"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Corsair -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Corsair">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Crime"/>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#War"/>
+                                            </owl:Restriction>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#underOrdersOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#King"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#underOrdersOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Corsair"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Crime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Crime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Exploration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Exploration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Frigate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Frigate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#NamedShip"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasShipSize"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Large"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Galion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Galion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#NamedShip"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasShipSize"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Large"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#King -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#King">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Large -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Large">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ShipSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#LegendaryCaptain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#LegendaryCaptain">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Magic"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Activity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#LegendaryShip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#LegendaryShip">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Ship"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasCaptain"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#LegendaryCaptain"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Magic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Magic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Merchant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Merchant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#NamedShip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#NamedShip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Ship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Pirate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Pirate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:complementOf>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#underOrdersOf"/>
+                                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#King"/>
+                                            </owl:Restriction>
+                                        </owl:complementOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Crime"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#underOrdersOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Pirate"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#PirateCaptain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#PirateCaptain">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Pirate"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#PirateSeaman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#PirateSeaman">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Seaman"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#underOrdersOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#PirateCaptain"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#PirateShip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#PirateShip">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Ship"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasCaptain"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#PirateCaptain"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Seaman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Seaman">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#underOrdersOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Ship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Ship">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasCaptain"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ShipSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ShipSize">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Large"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Small"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Sloop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Sloop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#NamedShip"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasShipSize"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Small"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Small -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Small">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ShipSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ToBeWatchedClosely -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ToBeWatchedClosely">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#isFriendWith"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Pirate"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#War -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#War">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#BlackPearl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#BlackPearl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Brigantine"/>
+        <worldOfPiracy:hasCaptain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#JackSparrow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Bobby -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Bobby">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Merchant"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#DavyJones -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#DavyJones">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#underOrdersOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#King"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Crime"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Magic"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ElisabethSwann -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ElisabethSwann">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+        <worldOfPiracy:isFriendWith rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#WillTurner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#FlyingDutchman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#FlyingDutchman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Frigate"/>
+        <worldOfPiracy:hasCaptain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#DavyJones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#GoldenShip -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#GoldenShip">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Galion"/>
+        <worldOfPiracy:hasCaptain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Simbad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#HMS_Providence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#HMS_Providence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Frigate"/>
+        <worldOfPiracy:hasCaptain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#HectorBarbossa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#HectorBarbossa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#HectorBarbossa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Crime"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#War"/>
+            </owl:Restriction>
+        </rdf:type>
+        <worldOfPiracy:underOrdersOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#KingGeorge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#JackSparrow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#JackSparrow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#underOrdersOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#King"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Crime"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Exploration"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#JoshGibbs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#JoshGibbs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Seaman"/>
+        <worldOfPiracy:underOrdersOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#JackSparrow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#KingGeorge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#KingGeorge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#King"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Simbad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Simbad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Exploration"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Magic"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Merchant"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#TheGreatTuna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#TheGreatTuna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Sloop"/>
+        <worldOfPiracy:hasCaptain rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Bobby"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#WillTurner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#WillTurner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Seaman"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Exploration"/>
+            </owl:Restriction>
+        </rdf:type>
+        <worldOfPiracy:underOrdersOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#JackSparrow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#WilliamDeath -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#WilliamDeath">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#War"/>
+            </owl:Restriction>
+        </rdf:type>
+        <worldOfPiracy:underOrdersOf rdf:resource="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#KingGeorge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Large"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Small"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Activity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Ship"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#ShipSize"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Brigantine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Frigate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Galion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Sloop"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Captain"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#King"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Seaman"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Crime"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Exploration"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Magic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#Merchant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/thomasjacquemin/ontologies/2019/10/worldOfPiracy#War"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
